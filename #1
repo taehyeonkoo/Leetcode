@@ -1,0 +1,13 @@
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        dic = dict()
+        for idx, num in enumerate(nums):
+            temp = target - num
+            if temp in dic:
+                return [dic[temp], idx]
+            dic[num] = idx
